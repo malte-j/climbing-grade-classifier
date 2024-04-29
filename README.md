@@ -1,5 +1,5 @@
 <center>
- <h1>climbing grade classification</h1>
+ <img width="100%" src="https://github.com/malte-j/climbing-grade-classifier/assets/12611076/e50c7ae7-a964-4e20-9353-e09b58e1bf76"/>
 </center>
 
 ## Setup
