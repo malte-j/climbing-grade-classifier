@@ -4,6 +4,8 @@
 
 ## Setup
 
+TO install a new package, e.g. ipykernel, run `uv pip install ipykernel` and then freeze the requiements using `uv pip freeze | uv pip compile - -o requirements.txt`.
+
 ### Requirements:
 - python 3.12.2
 - [uv](https://pypi.org/project/uv/)
@@ -13,3 +15,4 @@
 1. Make sure you've installed all requirements
 2. Create a virtual environment `uv venv` and activate it `source .venv/bin/activate`
 3. Install the requirements `uv pip install -r requirements.txt`
+
