@@ -22,7 +22,9 @@ click==8.1.7
 cloudpathlib==0.16.0
     # via weasel
 comm==0.2.2
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   ipywidgets
 confection==0.1.4
     # via
     #   thinc
@@ -108,7 +110,9 @@ marisa-trie==1.1.0
 markupsafe==2.1.5
     # via jinja2
 matplotlib==3.8.4
-    # via ipympl
+    # via
+    #   fastai
+    #   ipympl
 matplotlib-inline==0.1.7
     # via
     #   ipykernel
@@ -130,6 +134,7 @@ numpy==1.26.4
     # via
     #   blis
     #   contourpy
+    #   imbalanced-learn
     #   ipympl
     #   matplotlib
     #   numba
@@ -157,9 +162,8 @@ pexpect==4.9.0
     # via ipython
 pillow==10.3.0
     # via
-    #   ipympl
-    #   matplotlib
     #   fastai
+    #   ipympl
     #   matplotlib
     #   torchvision
 pip==24.0
@@ -304,7 +308,7 @@ wasabi==1.1.2
     #   weasel
 wcwidth==0.2.13
     # via prompt-toolkit
-widgetsnbextension==4.0.10
-    # via ipywidgets
 weasel==0.3.4
     # via spacy
+widgetsnbextension==4.0.10
+    # via ipywidgets
