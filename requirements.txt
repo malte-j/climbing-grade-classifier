@@ -5,7 +5,9 @@ appnope==0.1.4
 asttokens==2.4.1
     # via stack-data
 comm==0.2.2
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   ipywidgets
 contourpy==1.2.1
     # via matplotlib
 cycler==0.12.1
@@ -20,8 +22,16 @@ fonttools==4.51.0
     # via matplotlib
 imufusion==1.2.4
 ipykernel==6.29.4
+ipympl==0.9.4
 ipython==8.24.0
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   ipympl
+    #   ipywidgets
+ipython-genutils==0.2.0
+    # via ipympl
+ipywidgets==8.1.2
+    # via ipympl
 jedi==0.19.1
     # via ipython
 jupyter-client==8.6.1
@@ -30,9 +40,12 @@ jupyter-core==5.7.2
     # via
     #   ipykernel
     #   jupyter-client
+jupyterlab-widgets==3.0.10
+    # via ipywidgets
 kiwisolver==1.4.5
     # via matplotlib
 matplotlib==3.8.4
+    # via ipympl
 matplotlib-inline==0.1.7
     # via
     #   ipykernel
@@ -42,6 +55,7 @@ nest-asyncio==1.6.0
 numpy==1.26.4
     # via
     #   contourpy
+    #   ipympl
     #   matplotlib
     #   scipy
 packaging==24.0
@@ -53,7 +67,9 @@ parso==0.8.4
 pexpect==4.9.0
     # via ipython
 pillow==10.3.0
-    # via matplotlib
+    # via
+    #   ipympl
+    #   matplotlib
 platformdirs==4.2.1
     # via jupyter-core
 prompt-toolkit==3.0.43
@@ -91,9 +107,13 @@ traitlets==5.14.3
     # via
     #   comm
     #   ipykernel
+    #   ipympl
     #   ipython
+    #   ipywidgets
     #   jupyter-client
     #   jupyter-core
     #   matplotlib-inline
 wcwidth==0.2.13
     # via prompt-toolkit
+widgetsnbextension==4.0.10
+    # via ipywidgets
