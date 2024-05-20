@@ -47,7 +47,10 @@ processed_data_malte = {
     "5-": [
         process_file("measurements/2024-05-03/malte-5minus.csv", 15535808, 64060764)
     ],
-    "6": [process_file("measurements/2024-05-03/malte-6.csv", 35368972, 121547587)],
+    "6": [
+        process_file("measurements/2024-05-03/malte-6.csv", 35368972, 121547587),
+        process_file("measurements/2024-04-30/malte-6.csv", 37257707, 49672677),
+    ],
 }
 
 
