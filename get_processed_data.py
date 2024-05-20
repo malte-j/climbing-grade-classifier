@@ -36,8 +36,20 @@ def process_file(file_path, start_ts, end_ts):
 
 
 processed_data_malte = {
-    "3": [process_file("measurements/2024-04-30/malte-3.csv", 13848061, 41408943)],
-    # "4": [process_file("measurements/2024-04-30/malte-4.csv", 12878159, 50263354)],
+    "3": [
+        process_file("measurements/2024-04-30/malte-3.csv", 13848061, 41408943),
+        process_file(
+            "measurements/2024-05-03/malte-3-bildschirm_an.csv", 27207765, 49546441
+        ),
+    ],
+    "4": [process_file("measurements/2024-05-03/malte-4.csv", 17343773, 98990743)],
+    "5-": [
+        process_file("measurements/2024-05-03/malte-5minus.csv", 15535808, 64060764)
+    ],
+    "6": [process_file("measurements/2024-05-03/malte-6.csv", 35368972, 121547587)],
 }
 
 
+processed_data_luis = {
+    "5-": [process_file("measurements/2024-05-03/luis-5minus.csv", 7915785, 103630640)],
+}
