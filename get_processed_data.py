@@ -39,6 +39,9 @@ processed_data_malte = {
     "3": [
         process_file("measurements/2024-04-30/malte-3.csv", 13848061, 41408943),
         process_file("measurements/2024-05-03/malte-3.csv", 27207765, 49546441),
+        process_file(
+            "measurements/2024-05-03/malte-3-bildschirm_aus.csv", 18316261, 46820050
+        ),
     ],
     "4": [
         process_file("measurements/2024-04-30/malte-4.csv", 12833225, 50560803),
@@ -47,6 +50,7 @@ processed_data_malte = {
     "5-": [
         process_file("measurements/2024-05-03/malte-5minus.csv", 15535808, 64060764)
     ],
+    
     "6": [
         process_file("measurements/2024-05-03/malte-6.csv", 35368972, 121547587),
         process_file("measurements/2024-04-30/malte-6.csv", 37257707, 49672677),
@@ -61,5 +65,4 @@ processed_data_luis = {
     ],
     "5-": [process_file("measurements/2024-05-03/luis-5minus.csv", 7915785, 103630640)],
     "5": [process_file("measurements/2024-04-30/luis-5.csv", 18215188, 147090949)],
-
 }
