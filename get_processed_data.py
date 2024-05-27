@@ -1,7 +1,10 @@
+from typing import Optional
 import numpy as np
 
 
-def process_file(file_path, start_ts, end_ts):
+def process_file(
+    file_path: str, start_ts: int, end_ts: int, annotation: Optional[str] = None
+) -> np.ndarray:
     raw_data = np.genfromtxt(
         file_path,
         delimiter=",",
@@ -42,6 +45,9 @@ processed_data_malte = {
         process_file(
             "measurements/2024-05-03/malte-3-bildschirm_aus.csv", 18316261, 46820050
         ),
+        process_file("measurements/2024-05-26/malte-3_1.csv", 22927121, 62276359),
+        process_file("measurements/2024-05-26/malte-3_2.csv", 35592329, 70026390),
+        process_file("measurements/2024-05-26/malte-3_3.csv", 20767801, 47627539),
     ],
     "4": [
         process_file("measurements/2024-04-30/malte-4.csv", 12833225, 50560803),
@@ -50,10 +56,25 @@ processed_data_malte = {
     "5-": [
         process_file("measurements/2024-05-03/malte-5minus.csv", 15535808, 64060764)
     ],
-    
     "6": [
         process_file("measurements/2024-05-03/malte-6.csv", 35368972, 121547587),
-        process_file("measurements/2024-04-30/malte-6.csv", 37257707, 49672677),
+        # process_file(
+        #     "measurements/2024-04-30/malte-6.csv",
+        #     37257707,
+        #     49672677,
+        #     "Extreme average acceleration magnitude of 7, might be an outlier.",
+        # ),
+        process_file("measurements/2024-05-26/malte-6_1.csv", 35925844, 114430150),
+        process_file("measurements/2024-05-26/malte-6_2.csv", 36491087, 114624550),
+    ],
+    "6+": [
+        process_file(
+            "measurements/2024-05-26/malte-6p_1.csv",
+            21328619,
+            130908568,
+            "This one was slightly weird because there was a clear end, but no clearly visible start.",
+        ),
+        process_file("measurements/2024-05-26/malte-6p_2.csv", 61063659, 159628039),
     ],
 }
 
