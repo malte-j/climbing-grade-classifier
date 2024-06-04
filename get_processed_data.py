@@ -44,7 +44,7 @@ def get_processed_data(
     grades: List[str],
     window_size: int = 0,
     overlap: int = 0,
-    drop_unfilled_windows: bool = False,
+    drop_unfilled_windows: bool = True,
 ):
     """
     Get processed data for a person and a list of grades.
