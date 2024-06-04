@@ -39,9 +39,12 @@ def process_file(
     return data
 
 
-
 def get_processed_data(
-    person: str, grades: List[str], window_size: int = 0, overlap: int = 0
+    person: str,
+    grades: List[str],
+    window_size: int = 0,
+    overlap: int = 0,
+    drop_unfilled_windows: bool = False,
 ):
     """
     Get processed data for a person and a list of grades.
@@ -50,6 +53,7 @@ def get_processed_data(
     - grades: list of grades to get data for
     - window_size: window size in n samples to include, with a frequency of 60 Hz to get 30s you need to set it to 60*30 = 1800
     - overlap: overlap in samples
+    - drop_unfilled_windows: if True, only windows with exactly window_size samples are included
     """
     if person == "malte":
         processed_data = processed_data_malte
@@ -65,7 +69,9 @@ def get_processed_data(
                 data.append(samples)
             else:
                 for i in range(0, len(samples), window_size - overlap):
-                    data.append(samples[i : i + window_size])
+                    window = samples[i : i + window_size]
+                    if not drop_unfilled_windows or len(window) == window_size:
+                        data.append(window)
 
     return data
 
