@@ -1,4 +1,5 @@
-from typing import Optional
+from typing import List, Optional
+
 import numpy as np
 
 
@@ -34,6 +35,28 @@ def process_file(
 
     # normalize again
     data["SampleTimeFine"] -= data["SampleTimeFine"][0]
+
+    return data
+
+
+def get_processed_data(
+    person: str, grades: List[str], window_size: int = 0, overlap: int = 0
+):
+    if person == "malte":
+        processed_data = processed_data_malte
+    elif person == "luis":
+        processed_data = processed_data_luis
+    else:
+        raise ValueError("Unknown person")
+
+    data = []
+    for grade in grades:
+        for samples in processed_data[grade]:
+            if window_size == 0:
+                data.append(samples)
+            else:
+                for i in range(0, len(samples), window_size - overlap):
+                    data.append(samples[i : i + window_size])
 
     return data
 
