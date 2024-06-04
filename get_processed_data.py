@@ -39,9 +39,18 @@ def process_file(
     return data
 
 
+
 def get_processed_data(
     person: str, grades: List[str], window_size: int = 0, overlap: int = 0
 ):
+    """
+    Get processed data for a person and a list of grades.
+    Parameters:
+    - person: either "malte" or "luis"
+    - grades: list of grades to get data for
+    - window_size: window size in n samples to include, with a frequency of 60 Hz to get 30s you need to set it to 60*30 = 1800
+    - overlap: overlap in samples
+    """
     if person == "malte":
         processed_data = processed_data_malte
     elif person == "luis":
