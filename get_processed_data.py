@@ -64,6 +64,8 @@ def get_processed_data(
 
     data = []
     for grade in grades:
+        if grade not in processed_data:
+            continue
         for samples in processed_data[grade]:
             if window_size == 0:
                 data.append(samples)
