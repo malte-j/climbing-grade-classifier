@@ -1,6 +1,7 @@
 from typing import List, Optional
 
 import numpy as np
+from sklearn.model_selection import train_test_split
 
 
 def process_file(
@@ -39,6 +40,17 @@ def process_file(
     return data
 
 
+def generate_windows(
+    data: np.ndarray, window_size: int, overlap: int, drop_unfilled_windows: bool
+) -> List[np.ndarray]:
+    windows = []
+    for i in range(0, len(data), window_size - overlap):
+        window = data[i : i + window_size]
+        if not drop_unfilled_windows or len(window) == window_size:
+            windows.append(window)
+    return windows
+
+
 def get_processed_data(
     person: str,
     grades: List[str],
@@ -66,14 +78,13 @@ def get_processed_data(
     for grade in grades:
         if grade not in processed_data:
             continue
-        for samples in processed_data[grade]:
+        for sample in processed_data[grade]:
             if window_size == 0:
-                data.append(samples)
+                data.append(sample)
             else:
-                for i in range(0, len(samples), window_size - overlap):
-                    window = samples[i : i + window_size]
-                    if not drop_unfilled_windows or len(window) == window_size:
-                        data.append(window)
+                data = data + generate_windows(
+                    sample, window_size, overlap, drop_unfilled_windows
+                )
 
     return data
 
@@ -127,3 +138,48 @@ processed_data_luis = {
     "5-": [process_file("measurements/2024-05-03/luis-5minus.csv", 7915785, 103630640)],
     "5": [process_file("measurements/2024-04-30/luis-5.csv", 18215188, 147090949)],
 }
+
+# train, test = get_train_test_split()
+# train["hard"] = List<ndarray>
+
+
+def get_train_test_split(
+    person: str,
+    window_size: int = 0,
+    overlap: int = 0,
+    drop_unfilled_windows: bool = True,
+    train_ratio: float = 0.9,
+):
+    if person == "malte":
+        processed_data = processed_data_malte
+    elif person == "luis":
+        processed_data = processed_data_luis
+    else:
+        raise ValueError("Unknown person")
+
+    difficulties = {
+        "easy": processed_data["3"] + processed_data["4"],
+        "hard": processed_data["6"] + processed_data["6+"],
+    }
+
+    train = {}
+    test = {}
+
+    for difficulty, samples in difficulties.items():
+        train[difficulty], test[difficulty] = train_test_split(
+            samples, train_size=train_ratio, shuffle=True
+        )
+
+    for split in [train, test]:
+        for difficulty, samples in split.items():
+            if window_size == 0:
+                split[difficulty] = np.concatenate(samples)
+            else:
+                windows = []
+                for sample in samples:
+                    windows = windows + generate_windows(
+                        sample, window_size, overlap, drop_unfilled_windows
+                    )
+                split[difficulty] = windows
+
+    return train, test
