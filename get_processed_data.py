@@ -167,7 +167,7 @@ def get_train_test_split(
 
     for difficulty, samples in difficulties.items():
         train[difficulty], test[difficulty] = train_test_split(
-            samples, train_size=train_ratio, shuffle=True
+            samples, train_size=train_ratio, shuffle=True, random_state=42
         )
 
     for split in [train, test]:
