@@ -186,8 +186,11 @@ def get_train_test_split(
         raise ValueError("Unknown person")
 
     difficulties = {
-        "easy": processed_data["3"] + processed_data["4"],
-        "hard": processed_data["6"] + processed_data["6+"],
+        "easy": processed_data["3"]
+        + processed_data["4"]
+        + processed_data["5"]
+        + processed_data["5-"],
+        "hard": processed_data["6"] + processed_data["6+"] + processed_data["7"],
     }
 
     train = {}
