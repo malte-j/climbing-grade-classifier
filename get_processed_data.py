@@ -99,13 +99,22 @@ processed_data_malte = {
         process_file("measurements/2024-05-26/malte-3_1.csv", 22927121, 62276359),
         process_file("measurements/2024-05-26/malte-3_2.csv", 35592329, 70026390),
         process_file("measurements/2024-05-26/malte-3_3.csv", 20767801, 47627539),
+        process_file("measurements/2024-06-09/malte-3.csv", 38352361, 70034385),
+        process_file("measurements/2024-06-13/malte-3.csv", 24345131, 60246498),
+        process_file("measurements/2024-06-13/malte-3_2.csv", 26936350, 63899199),
     ],
     "4": [
         process_file("measurements/2024-04-30/malte-4.csv", 12833225, 50560803),
         process_file("measurements/2024-05-03/malte-4.csv", 17343773, 98990743),
+        process_file("measurements/2024-06-13/malte-4.csv", 23562047, 55113000),
+        process_file("measurements/2024-06-13/malte-4_2.csv", 31481811, 69008021),
     ],
     "5-": [
         process_file("measurements/2024-05-03/malte-5minus.csv", 15535808, 64060764)
+    ],
+    "5": [
+        process_file("measurements/2024-06-13/malte-5.csv", 46554465, 115676828),
+        process_file("measurements/2024-06-13/malte-5_2.csv", 35597328, 89274487),
     ],
     "6": [
         process_file("measurements/2024-05-03/malte-6.csv", 35368972, 121547587),
@@ -117,6 +126,7 @@ processed_data_malte = {
         # ),
         process_file("measurements/2024-05-26/malte-6_1.csv", 35925844, 114430150),
         process_file("measurements/2024-05-26/malte-6_2.csv", 36491087, 114624550),
+        process_file("measurements/2024-06-13/malte-6.csv", 41535055, 141851639),
     ],
     "6+": [
         process_file(
@@ -126,6 +136,12 @@ processed_data_malte = {
             "This one was slightly weird because there was a clear end, but no clearly visible start.",
         ),
         process_file("measurements/2024-05-26/malte-6p_2.csv", 61063659, 159628039),
+        process_file("measurements/2024-06-09/malte-6p.csv", 59272943, 161310032),
+        process_file("measurements/2024-06-09/malte-6p_2.csv", 51777649, 170703368),
+        process_file("measurements/2024-06-13/malte-6p.csv", 45585106, 185489448),
+    ],
+    "7": [
+        process_file("measurements/2024-06-13/malte-7.csv", 32408679, 231538620),
     ],
 }
 
@@ -134,9 +150,21 @@ processed_data_luis = {
     "3": [
         process_file("measurements/2024-04-30/luis-3.csv", 3306648, 45876383),
         process_file("measurements/2024-05-03/luis-3.csv", 15909563, 59147842),
+        process_file("measurements/2024-06-09/luis-3.csv", 58395424, 106379845),
+        process_file("measurements/2024-06-13/luis-3.csv", 22768958, 82762259),
+        process_file("measurements/2024-06-13/luis-3_2.csv", 24225032, 43004217),
+    ],
+    "4": [
+        process_file("measurements/2024-06-13/luis-4.csv", 59837548, 153137678),
+        process_file("measurements/2024-06-13/luis-4_2.csv", 30895700, 135832938),
+        process_file("measurements/2024-06-13/luis-4_3.csv", 24270977, 148639748),
     ],
     "5-": [process_file("measurements/2024-05-03/luis-5minus.csv", 7915785, 103630640)],
-    "5": [process_file("measurements/2024-04-30/luis-5.csv", 18215188, 147090949)],
+    "5": [
+        process_file("measurements/2024-04-30/luis-5.csv", 18215188, 147090949),
+        process_file("measurements/2024-06-09/luis-5.csv", 58106964, 340573344),
+        process_file("measurements/2024-06-13/luis-5_2.csv", 73859300, 194768025),
+    ],
 }
 
 # train, test = get_train_test_split()
