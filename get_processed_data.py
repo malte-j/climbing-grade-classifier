@@ -43,6 +43,14 @@ def process_file(
 def generate_windows(
     data: np.ndarray, window_size: int, overlap: int, drop_unfilled_windows: bool
 ) -> List[np.ndarray]:
+    """
+    Generate windows of a given size with a given overlap.
+    Parameters:
+    - data: data to generate windows for
+    - window_size: window size in n samples. 1 sample is 1/60s, so to get a 1s window, set it to 60
+    - overlap: overlap in samples, e.g. 30 would mean .5s overlap
+    """
+
     windows = []
     for i in range(0, len(data), window_size - overlap):
         window = data[i : i + window_size]
