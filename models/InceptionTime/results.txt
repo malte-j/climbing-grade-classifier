@@ -1,0 +1,90 @@
+window 1 overlap 0 (stride 1)
+time 10.65705
+epoch 10
+lr 2.2e-4
+acc: 0.7180851063829787
+balanced acc : 0.6838202907062105
+balanced acc (adjusted): 0.36764058141242106
+f1 score: 0.728756873781584
+
+window 5 overlap 0 (stride 5)
+time 10.308884
+epoch 25
+lr 2.2e-4
+acc: 0.8611111111111112
+balanced acc : 0.8703703703703703
+balanced acc (adjusted): 0.7407407407407407
+f1 score: 0.8669467787114846
+
+window 5 overlap 2 (stride 3)
+time
+epoch 25
+lr 2.2e-4
+acc: 0.8305084745762712
+balanced acc : 0.8396825396825396
+balanced acc (adjusted): 0.6793650793650792
+f1 score: 0.8394103404073493
+
+window 10 overlap 0 (stride 10)
+time 
+epoch 35
+lr 2.2e-4
+acc: 0.8823529411764706
+balanced acc : 0.9230769230769231
+balanced acc (adjusted): 0.8461538461538463
+f1 score: 0.8892156862745099
+
+
+window 10 overlap 2 (stride 8)
+time 15.841534
+epoch 35
+lr 2.2e-4
+acc: 0.9545454545454546
+balanced acc : 0.9705882352941176
+balanced acc (adjusted): 0.9411764705882353
+f1 score: 0.9559228650137741
+
+window 10 overlap 5 (stride 5)
+time 24.539949
+epoch 35
+lr 2.2e-4
+acc: 0.8787878787878788
+balanced acc : 0.9230769230769231
+balanced acc (adjusted): 0.8461538461538463
+f1 score: 0.8872053872053872
+
+window 15 overlap 0 (stride 15)
+time 13.312636
+epoch 50
+lr 2.2e-4
+acc: 0.9090909090909091
+balanced acc : 0.9444444444444444
+balanced acc (adjusted): 0.8888888888888888
+f1 score: 0.9155080213903743
+
+window 15 overlap 2 (stride 13)
+time 20.220368
+epoch 75
+lr 2.2e-4
+acc: 0.9166666666666666
+balanced acc : 0.95
+balanced acc (adjusted): 0.8999999999999999
+f1 score: 0.9228070175438595
+
+window 15 overlap 5 (stride 10)
+time 33.250946
+epoch 75
+lr 2.2e-4
+acc: 0.9375
+balanced acc : 0.9615384615384616
+balanced acc (adjusted): 0.9230769230769231
+f1 score: 0.9407142857142857
+
+window 15 overlap 10 (stride 5)
+time 39.40322
+epoch 50
+lr 2.2e-4
+acc: 0.9666666666666667
+balanced acc : 0.98
+balanced acc (adjusted): 0.96
+f1 score: 0.9678416821273963
