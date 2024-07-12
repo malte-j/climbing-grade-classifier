@@ -57,7 +57,9 @@ kiwisolver==1.4.5
 llvmlite==0.42.0
     # via numba
 matplotlib==3.8.4
-    # via ipympl
+    # via
+    #   ipympl
+    #   seaborn
 matplotlib-inline==0.1.7
     # via
     #   ipykernel
@@ -76,6 +78,7 @@ numpy==1.26.4
     #   patsy
     #   scikit-learn
     #   scipy
+    #   seaborn
     #   statsmodels
     #   stumpy
     #   tsfresh
@@ -86,6 +89,7 @@ packaging==24.0
     #   statsmodels
 pandas==2.2.2
     # via
+    #   seaborn
     #   statsmodels
     #   tsfresh
 parso==0.8.4
@@ -135,6 +139,7 @@ scipy==1.13.0
     #   statsmodels
     #   stumpy
     #   tsfresh
+seaborn==0.13.2
 setuptools==70.0.0
 six==1.16.0
     # via
