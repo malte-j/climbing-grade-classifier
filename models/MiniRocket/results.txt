@@ -1,0 +1,117 @@
+window 1 overlap 0 (stride 1)
+time 16.404181
+epoch 35
+lr 9.2e-5
+acc: 0.7553191489361702
+balanced acc : 0.7618558214652768
+balanced acc (adjusted): 0.5237116429305535
+f1 score: 0.7678263926461582
+
+
+window 5 overlap 0 (stride 5)
+time 13.725453
+epoch 25
+lr 1.9e-4
+acc: 0.8888888888888888
+balanced acc : 0.8888888888888888
+balanced acc (adjusted): 0.7777777777777777
+f1 score: 0.8923076923076922
+
+window 5 overlap 2 (stride 3)
+time 28.636453
+epoch 35
+lr 1.5e-4
+acc: 0.8983050847457628
+balanced acc : 0.9333333333333333
+balanced acc (adjusted): 0.8666666666666667
+f1 score: 0.9036462042444097
+
+window 5 overlap 3 (stride 2)
+time 13.316606
+epoch 10
+lr 2.2e-4
+acc: 0.8202247191011236
+balanced acc : 0.8494397759103641
+balanced acc (adjusted): 0.6988795518207283
+f1 score: 0.8315009463976482
+
+window 10 overlap 0 (stride 10)
+time 16.8239
+epoch 35
+lr 2.7e-4
+acc: 0.8235294117647058
+balanced acc : 0.8846153846153846
+balanced acc (adjusted): 0.7692307692307692
+f1 score: 0.836084631481051
+
+window 10 overlap 2 (stride 8)
+time 32.46583
+epoch 50
+lr 2.2e-4
+acc: 0.9545454545454546
+balanced acc : 0.9705882352941176
+balanced acc (adjusted): 0.9411764705882353
+f1 score: 0.9559228650137741
+
+window 10 overlap 5 (stride 5)
+time 53.121214
+epoch 50
+lr 2.2e-4
+acc: 0.9090909090909091
+balanced acc : 0.9423076923076923
+balanced acc (adjusted): 0.8846153846153846
+f1 score: 0.9143293681108807
+
+window 10 overlap 8 (stride 2)
+time 35.905185
+epoch 15
+lr 2.2e-4
+acc: 0.9135802469135802
+balanced acc : 0.9225961538461538
+balanced acc (adjusted): 0.8451923076923076
+f1 score: 0.917691024357691
+
+window 15 overlap 0 (stride 15)
+time 21.469025
+epoch 50
+lr 2.2e-4
+acc: 0.9090909090909091
+balanced acc : 0.9444444444444444
+balanced acc (adjusted): 0.8888888888888888
+f1 score: 0.9155080213903743
+
+window 15 overlap 2 (stride 13)
+time 21.523121
+epoch 50
+lr 2.2e-4
+acc: 1.0
+balanced acc : 1.0
+balanced acc (adjusted): 1.0
+f1 score: 1.0
+
+window 15 overlap 5 (stride 10)
+time 35.837428
+epoch 50
+lr 2.2e-4
+acc: 1.0
+balanced acc : 1.0
+balanced acc (adjusted): 1.0
+f1 score: 1.0
+
+window 15 overlap 10 (stride 5)
+time 32.590145
+epoch 25
+lr 2.2e-4
+acc: 0.9666666666666667
+balanced acc : 0.98
+balanced acc (adjusted): 0.96
+f1 score: 0.9678416821273963
+
+window 15 overlap 13 (stride 2)
+time 33.764321
+epoch 10
+lr 2.2e-4
+acc: 0.9864864864864865
+balanced acc : 0.9920634920634921
+balanced acc (adjusted): 0.9841269841269842
+f1 score: 0.986726204465335
