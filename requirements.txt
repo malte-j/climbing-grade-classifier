@@ -164,6 +164,7 @@ packaging==24.0
     #   weasel
 pandas==2.2.2
     # via
+    #   seaborn
     #   fastai
     #   seaborn
     #   sktime
@@ -247,8 +248,10 @@ scipy==1.13.0
     #   scikit-learn
     #   sktime
     #   statsmodels
+    #   stumpy
+    #   tsfresh
 seaborn==0.13.2
-setuptools==69.5.1
+setuptools==70.0.0
     # via
     #   marisa-trie
     #   spacy
