@@ -9,20 +9,20 @@ from sklearn.pipeline import Pipeline
 from tsfresh.transformers import RelevantFeatureAugmenter
 from get_processed_data import get_train_test_split
 import pickle
-import time
-from collections.abc import Iterator
-from contextlib import contextmanager
 import os
+# import time
+# from collections.abc import Iterator
+# from contextlib import contextmanager
 
 
-@contextmanager
-def time_it() -> Iterator[None]:
-    tic: float = time.perf_counter()
-    try:
-        yield
-    finally:
-        toc: float = time.perf_counter()
-        print(f"Computation time = {1000*(toc - tic):.3f}ms")
+# @contextmanager
+# def time_it() -> Iterator[None]:
+#     tic: float = time.perf_counter()
+#     try:
+#         yield
+#     finally:
+#         toc: float = time.perf_counter()
+#         print(f"Computation time = {1000*(toc - tic):.3f}ms")
 
 
 def getSplits(window_size, overlap):
@@ -79,7 +79,7 @@ def runPipeline(X_train, df_ts_train, y_train, X_test, df_ts_test, y_test, confi
                     column_value=None,
                 ),
             ),
-            ("classifier", RandomForestClassifier(class_weight="balanced")),
+            ("classifier", RandomForestClassifier()),
         ]
     )
     ppl.set_params(augmenter__timeseries_container=df_ts_train)
@@ -149,18 +149,17 @@ def main():
     ]
 
     for config in runsConfig:
-        with time_it():
-            data = getSplits(config["window_size"], config["overlap"])
-            pipelineResult = runPipeline(*data, config)
-            print(pipelineResult)
+        data = getSplits(config["window_size"], config["overlap"])
+        pipelineResult = runPipeline(*data, config)
+        print(pipelineResult)
 
-            # print to file
-            with open("random_forest_results.txt", "a") as f:
-                f.write(
-                    f"Window size: {config['window_size']}, Overlap: {config['overlap']}\n"
-                )
-                f.write(pipelineResult)
-                f.write("\n\n")
+        # print to file
+        with open("random_forest_results_unbalanced.txt", "a") as f:
+            f.write(
+                f"Window size: {config['window_size']}, Overlap: {config['overlap']}\n"
+            )
+            f.write(pipelineResult)
+            f.write("\n\n")
 
 
 if __name__ == "__main__":
