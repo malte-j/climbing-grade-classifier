@@ -1,0 +1,39 @@
+Window size: 60, Overlap: 0
+              precision    recall  f1-score   support
+
+       False       0.59      0.67      0.63        49
+        True       0.88      0.83      0.86       139
+
+    accuracy                           0.79       188
+   macro avg       0.73      0.75      0.74       188
+weighted avg       0.80      0.79      0.80       188
+
+Balanced accuracy score: 0.7540008809279107
+Accuracy Score: 0.7925531914893617
+
+Window size: 600, Overlap: 300
+              precision    recall  f1-score   support
+
+       False       0.88      1.00      0.93         7
+        True       1.00      0.96      0.98        26
+
+    accuracy                           0.97        33
+   macro avg       0.94      0.98      0.96        33
+weighted avg       0.97      0.97      0.97        33
+
+Balanced accuracy score: 0.9807692307692308
+Accuracy Score: 0.9696969696969697
+
+Window size: 60, Overlap: 0
+              precision    recall  f1-score   support
+
+       False       0.54      0.61      0.57        49
+        True       0.86      0.81      0.83       139
+
+    accuracy                           0.76       188
+   macro avg       0.70      0.71      0.70       188
+weighted avg       0.77      0.76      0.77       188
+
+Balanced accuracy score: 0.7125972691234768
+Accuracy Score: 0.7606382978723404
+
